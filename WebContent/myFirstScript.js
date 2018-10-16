@@ -15,10 +15,35 @@ function validateMyForm(){
 	alert("coucou");
 }
 
-function toogleFM(){
-	alert("clicked");
-	var borders = document.getElementsByClass('formBloc');
-	borders.forEach(function(borders){
-		borders.style.borderColor="blue";
+function toogleFM(checkId){
+	var color ="";
+	var hexa ="";
+	if(checkId=="male"){
+		color = "red";
+		hexa= "#FFF3F3"
+	}
+	else{
+		color= "blue";
+		hexa= "#77B5FE"
+	}
+	
+	var borders = document.getElementsByClassName('formBloc');
+	[].forEach.call(borders, function(border){
+		border.style.borderColor=color;
 	})
+	
+	var titles = document.getElementsByClassName('formTitle');
+	[].forEach.call(titles, function(title){
+		title.style.color=color;
+	})
+	
+	var rectangles = document.getElementsByClassName('rectangle');
+	[].forEach.call(rectangles, function(rectangle){
+		rectangle.style.backgroundColor=hexa;
+		rectangle.style.borderColor=color;
+	})
+	
+	var submit = document.getElementById('submit');
+	submit.style.backgroundColor=hexa;
+	submit.style.borderColor=color;
 }
