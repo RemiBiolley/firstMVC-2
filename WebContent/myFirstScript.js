@@ -20,11 +20,13 @@ function toogleFM(checkId){
 	var hexa ="";
 	if(checkId=="male"){
 		color = "red";
-		hexa= "#FFF3F3"
+		hexa= "#FFF3F3";
+		h1 = "Hello Sir";
 	}
 	else{
 		color= "blue";
-		hexa= "#77B5FE"
+		hexa= "#87CEEB";
+		h1="Hello Madam";
 	}
 	
 	var borders = document.getElementsByClassName('formBloc');
@@ -46,4 +48,10 @@ function toogleFM(checkId){
 	var submit = document.getElementById('submit');
 	submit.style.backgroundColor=hexa;
 	submit.style.borderColor=color;
+	
+	var headTitle = document.getElementsByTagName('h1');
+	[].forEach.call(headTitle, function(head){
+		head.innerHTML = h1;
+	})
+	
 }
