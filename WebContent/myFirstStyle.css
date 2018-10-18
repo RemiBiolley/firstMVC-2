@@ -3,19 +3,35 @@
 .formTitle
 {
 	color : red;
-	width :25%;
 	font-weight: bold;
 	padding-left: 15px;
 	margin-top:-26px;
 	background-color:white;
 }
 
-.formBloc{
+#personal
+{
+	width : 30%;
+}
+
+#bd
+{
+	width: 15%;
+}
+
+#sex
+{
+	width: 8%;
+}
+
+.formBloc
+{
 	border: red solid 1px;
 	padding: 15px;
 	margin:10px;
-	width:75%;
-
+	width:40%;
+	min-height: 26px;
+	height: auto;
 }
 
 .rectangle
@@ -23,7 +39,9 @@
 	background-color: #FFF3F3;
 	border: red solid 1px;
 	border-radius: 5px;
-	margin: 3px;
+	position: absolute;
+	left: 25%;
+	width: 15%;
 }
 
 .rectangle:focus{
@@ -32,7 +50,11 @@
 
 .formText
 {
-	padding-left:30px;
+	width:90%;
+	display: flex;
+	padding-left:10%;
+	margin-top:5px;
+	align-content:flex-start;
 }
 
 #submit
@@ -42,4 +64,16 @@
 	box-shadow: 1px 1px;
 	border:red solid 1px;
 	margin-left:10px;
+}
+
+.description
+{
+	position:absolute;
+	right: 83%;
+}
+
+#female, #male
+{
+	position:absolute;
+	right:66.5%;
 }

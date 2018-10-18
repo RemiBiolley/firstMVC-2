@@ -7,30 +7,37 @@
 </head>
 <body>
 	<script src="myFirstScript.js" type="text/javascript" /></script>
-	<h2> Index Page of the MVC Application (lab1) </h2>
+	<h1> Index Page of the MVC Application (lab1) </h1>
 		<form method="post" action="/firstMVC/Controller">
-		<!--<form method="post" action="/firstMVC/index.html">-->
+		
 		<div class="formBloc">
-			<div class="formTitle">Personnal information</div>
+			<div class="formTitle" id="personal">Personal information</div>
 			<div class="formText">
-				First name: <input type="text" name="firstName" class="rectangle"> <br>
-				Last name: <input type="text" name="lastName" class="rectangle"> <br>
+				<div class="description">First name: </div>
+				<input type="text" name="firstName" class="rectangle"> <br>
+			</div>
+			<div class="formText">
+				<div class="description">Last name:</div>
+				<input type="text" name="lastName" class="rectangle"> <br>
 			</div>
 		</div>
 		
 		<div class="formBloc">
-			<div class="formTitle"> Birth Day: </div>
+			<div class="formTitle" id="bd"> Birth Day </div>
 			<div class="formText">
-				Date: <input type="date" name="birthDay" class="rectangle"> (La date doit être de la forme "YYYY-MM-DD")<br>
+				<div class="description">Date ("YYYY-MM-DD") :</div>
+				<input type="date" name="birthDay" class="rectangle"><br>
 			</div>
 		</div>
 		
 		<div class="formBloc">
-			<div class = "formTitle">Sex</div>
-				Male <input type="radio" name="sex" value="male" onclick='toogleFM()' id="check1" checked /><br>
+			<div class = "formTitle" id="sex">Sex</div>
+			
+			<div class="description">Male</div>
+			<input type="radio" id="male" name="sex" value="male" onclick='toogleFM(this.id)' checked /><br>
 			        
-				Female <input type="radio" name="sex" value="female" id="check2" />
-  
+			<div class="description">Female</div>
+			<input type="radio" id="female" name="sex" value="female" onclick='toogleFM(this.id)' />
 		</div>
 		
 		<input type="submit" value="envoyer" id ="submit" onclick=' return validateMyForm()'>
